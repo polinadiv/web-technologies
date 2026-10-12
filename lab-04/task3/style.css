@@ -1,0 +1,57 @@
+a {
+    color: purple;
+}
+
+.main-menu-item {
+    color: green;
+}
+
+.other-item {
+    color: black;
+    font-weight: normal;
+}
+
+ul {
+    padding-left: 30px;
+}
+
+ul ul {
+    list-style-position: outside;
+    padding-left: 20px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+.square-list {
+    list-style-type: square;
+}
+
+.custom-icon-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.custom-icon-list li {
+    position: relative;
+    padding-left: 22px;
+}
+
+.custom-icon-list li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: #554466;
+    font-weight: bold;
+}
+
+ul li ul.no-markers {
+    list-style-type: none;
+}
+
+.square-list a {
+    text-decoration: none;
+}
+
+ol {
+    list-style-position: inside;
+}
