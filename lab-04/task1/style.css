@@ -1,4 +1,4 @@
-* {
+body {
     font-family: Arial, sans-serif;
     font-size: 20px;
     line-height: 40px;
@@ -13,30 +13,32 @@ div {
     text-align: justify;
 }
 
-.red-text {
+.colored-text {
     color: red;
 }
 
 .nowrap {
     white-space: nowrap;
+    text-align: left;
 }
 
-#italic-bold {
+.italic-bold {
     font-style: italic;
     font-weight: bold;
 }
 
 .text-shadow {
-    text-shadow: 5px -5px 3px darkred;
+    text-shadow: 3px 3px 5px darkred;
 }
 
-.div-style1 {
+.strike-block {
     text-decoration: line-through;
     text-transform: uppercase;
     text-indent: 50px;
 }
 
-.div-style2 {
-    letter-spacing: 30px;
-    word-spacing: 50px;
+.spaced-text {
+    letter-spacing: 15px;
+    word-spacing: 30px;
+    color: darkgreen;
 }
