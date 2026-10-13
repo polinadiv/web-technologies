@@ -12,7 +12,7 @@ h1 {
     text-align: center;
 }
 
-#products-heading {
+.products-heading {
     font-family: Arial, sans-serif;
     color: black;
     font-size: 18px;
@@ -45,16 +45,16 @@ h1 {
     color: grey;
 }
 
-#sugar-item {
+.sugar-item {
     font-weight: bold;
 }
 
-.yellow-bg {
+.marked-text {
     background-color: yellow;
     padding: 1px 4px;
 }
 
-.green-line {
+.separeted-line {
     border-bottom: 4px solid green;
     width: 490px;
     margin: 12px auto;
