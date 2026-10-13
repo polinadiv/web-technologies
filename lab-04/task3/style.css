@@ -26,17 +26,17 @@ ul ul {
     list-style-type: square;
 }
 
-.custom-icon-list {
+.checked-list {
     list-style-type: none;
     padding-left: 0;
 }
 
-.custom-icon-list li {
+.checked-list li {
     position: relative;
     padding-left: 22px;
 }
 
-.custom-icon-list li::before {
+.checked-list li::before {
     content: "✔";
     position: absolute;
     left: 0;
