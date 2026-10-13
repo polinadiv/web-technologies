@@ -1,94 +1,79 @@
-/* 1. Курсивність, жирність, підкреслення для span всередині p з класом .text-background */
 p span {
     font-style: italic;
     font-weight: bold;
     text-decoration: underline;
     text-decoration-color: darkred;
 }
-/* Жовтий фон лише для слів у цьому спеціальному абзаці */
 div.text-background p.text-background span {
     background-color: yellow;
-    font-style: normal; /* за потреби можна налаштувати */
+    font-style: normal;
     font-weight: normal;
     text-decoration: none;
 }
-/* Примусово робимо жирними й підкресленими всі жовті слова в цьому абзаці */
 div.text-background p.text-background span {
     font-weight: bold !important;
     text-decoration: underline !important;
 }
 
-/* 2. Жовтий фон для span всередині p, які всередині div з класом .text-background */
 div.text-background p span {
     background-color: transparent;
 }
 
-/* 3. Сірий фон та перекреслений текст для span всередині інших span */
 span span {
     background-color: grey;
     text-decoration: line-through;
 }
-
-/* 4. Розмір 18px, верхній регістр для span у span у нумерованому списку */
 ol span span {
     font-size: 18px;
     text-transform: uppercase;
 }
 
-/* 5. Тінь тексту та відступ першого рядка 50px для абзаців на 1-му рівні вкладеності в section */
 section > p {
     text-shadow: 3px 3px 5px darkred;
     text-indent: 50px;
     color: black;
 }
 
-/* 6. Змінити маркер списку на зображення для ul, розташованих безпосередньо в li */
 li > ul {
-    list-style: none; /* прибираємо стандартні маркери */
+    list-style: none;
 }
 
 li > ul > li::before {
-    content: "✓ "; /* вставляємо символ галочки як текст */
+    content: "✓ ";
     color: purple;
     font-weight: bold;
     margin-right: 6px;
 }
 
-/* 7. Інтервал між словами 50px для абзаців з класом .text-background на 1-му рівні div (через дочірній комбінатор) */
 div > p.text-background {
     word-spacing: 50px;
 }
 
-/* 8. Жирність для абзаців на 1-му рівні вкладеності в div з класом .text-bold */
 div.text-bold > p {
     font-weight: bold;
 }
 
-/* 9. Міжрядковий інтервал 45px для абзаців на 1-му рівні section, яка є прямим нащадком div.text-bold */
 div.text-bold > section > p {
     line-height: 45px;
 }
 
-/* 10. Коричневий фон для абзацу, що йде одразу за img */
 img + p {
     background-color: brown;
     color: black;
 }
-/* 11. Відступи та колір для абзаців, які йдуть після секції (розділ "Різне") */
 section ~ p {
-    margin-top: 15px;      /* створює відчутний простір між кожним абзацом */
+    margin-top: 15px;
     margin-bottom: 15px;
 }
 
-/* Робимо червоним тільки рядок із цим класом */
 p.red-text {
     color: red;
     font-weight: bold;
 }
-/* Відступи між абзацами */
+
 p.spaced-paragraph {
     margin-top: 18px;
     margin-bottom: 18px;
-    text-indent: 50px; /* додає відступ виключно для першого рядка */
-    line-height: 45px;  /* створює вертикальний відступ між рядками всередині абзацу */
+    text-indent: 50px;
+    line-height: 45px;
 }
