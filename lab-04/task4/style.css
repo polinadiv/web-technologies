@@ -57,7 +57,7 @@ div.text-bold > section > p {
     line-height: 45px;
 }
 
-img + p {
+img + p + p + span {
     background-color: brown;
     color: black;
 }
@@ -66,7 +66,7 @@ section ~ p {
     margin-bottom: 15px;
 }
 
-p.red-text {
+p.accent-text {
     color: red;
     font-weight: bold;
 }
