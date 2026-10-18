@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Завдання 6 - Сайт-візитка та фони</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Сайт-візитка з фоновими зображеннями</h1>
+
+    <section>
+        <h2>Блок «Теги» (display)</h2>
+        <p>П'ять елементів div (перетворені на рядкові - inline):</p>
+        <div class="inline-box">Div 1</div>
+        <div class="inline-box">Div 2</div>
+        <div class="inline-box">Div 3</div>
+        <div class="inline-box">Div 4</div>
+        <div class="inline-box">Div 5</div>
+
+        <p>П'ять елементів span (перетворені на блокові - block):</p>
+        <span class="block-box">Span 1 (150px)</span>
+        <span class="block-box">Span 2 (150px)</span>
+        <span class="block-box">Span 3 (150px)</span>
+        <span class="block-box">Span 4 (150px)</span>
+        <span class="block-box">Span 5 (150px)</span>
+    </section>
+
+    <hr>
+
+    <section>
+        <h2>Блок «Повторення фону» (background-repeat)</h2>
+        <div class="repeat-box repeat-x">repeat-x</div>
+        <div class="repeat-box repeat-y">repeat-y</div>
+        <div class="repeat-box repeat-space">space</div>
+        <div class="repeat-box repeat-round">round</div>
+    </section>
+
+    <hr>
+
+    <section>
+        <h2>Блок «Масштабування» (background-size)</h2>
+        <div class="size-box bg-contain">contain</div>
+        <div class="size-box bg-cover">cover</div>
+    </section>
+
+    <hr>
+
+    <section>
+        <h2>Блок «Прокручування фону» (background-attachment)</h2>
+
+        <p>Scroll</p>
+        <div class="scroll-box bg-scroll">
+            Цей текст дуже довгий, щоб перевірити прокручування всередині блоку.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </div>
+
+        <p>Local</p>
+        <div class="scroll-box bg-local">
+            Цей текст дуже довгий, щоб перевірити прокручування всередині блоку.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </div>
+    </section>
+
+</div>
+
+</body>
+</html>
