@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Завдання 5 - box-sizing, overflow, display</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>1. Властивість box-sizing</h2>
+<div class="box-sizing-demo">
+    Блок 1: box-sizing: content-box. Загальна ширина: 340px (300px ширина + 20px padding зліва/справа + 5px border зліва/справа).
+</div>
+<div class="box-sizing-demo">
+    Блок 2: box-sizing: border-box. Загальна ширина: 300px (рамка і відступи входять у задану ширину).
+</div>
+
+
+<h2>2. Властивість overflow</h2>
+<div class="overflow-demo overflow-visible">
+    <strong>overflow: visible;</strong> Цей текст дуже довгий, тому він виходитиме за межі контейнера, оскільки переповнення ніяк не обрізається і не ховається, створюючи ефект виходу за межі рамки блоку.
+</div>
+<div class="overflow-demo overflow-hidden">
+    <strong>overflow: hidden;</strong> Цей текст дуже довгий, тому зайва частина просто обрізається і стає невидимою для користувача, не створюючи жодних смуг прокрутки на блоці.
+</div>
+<div class="overflow-demo overflow-scroll">
+    <strong>overflow: scroll;</strong> Цей текст дуже довгий, тому завжди з'являються горизонтальна та вертикальна смуги прокрутки, щоб користувач міг переглянути прихований вміст блоку.
+</div>
+<div class="overflow-demo overflow-auto">
+    <strong>overflow: auto;</strong> Цей текст дуже довгий, тому смуги прокрутки з'являються автоматично лише тоді, коли вміст дійсно не поміщається у задані межі блоку.
+</div>
+
+
+<h2>3. Властивість display (горизонтальне меню)</h2>
+<nav>
+    <ul>
+        <li><a href="#">Головна</a></li>
+        <li><a href="#">Про нас</a></li>
+        <li class="hidden-item">Прихований пункт</li>
+        <li><a href="#">Послуги</a></li>
+        <li><a href="#">Контакти</a></li>
+    </ul>
+</nav>
+
+</body>
+</html>

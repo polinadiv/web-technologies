@@ -1,0 +1,93 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+h2 {
+    color: #2c3e50;
+    margin-top: 30px;
+}
+
+.box-sizing-demo {
+    width: 300px;
+    padding: 20px;
+    border: 5px solid #2980b9;
+    background-color: #eaf2f8;
+    display: inline-block;
+    vertical-align: top;
+    margin: 20px 20px 20px 0;
+    box-sizing: content-box;
+}
+
+.box-sizing-demo:nth-of-type(2) {
+    box-sizing: border-box;
+    background-color: #d4e6f1;
+    border-color: #1b4f72;
+}
+
+
+.overflow-demo {
+    width: 250px;
+    height: 80px;
+    border: 2px solid #34495e;
+    padding: 10px;
+    margin: 25px 0;
+    background-color: #ffffff;
+    font-size: 13px;
+    box-sizing: border-box;
+    line-height: 1.2;
+}
+
+.overflow-visible {
+    overflow: visible;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.overflow-scroll {
+    overflow: scroll;
+}
+
+.overflow-auto {
+    overflow: auto;
+}
+
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    background-color: #2c3e50;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    display: block;
+    padding: 10px 20px;
+    color: #ffffff;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #34495e;
+}
+
+/* Приховування одного з пунктів за допомогою display: none
+   ПРИМІТКА ЩОДО ВІДМІННОСТЕЙ:
+   display: none повністю видаляє елемент з потоку документа (він не займає місця на сторінці взагалі).
+   На відміну від нього, visibility: hidden просто робить елемент невидимим, але він продовжує
+   займати свій простір (порожнє місце залишається). А opacity: 0 робить елемент прозорим,
+   але він також залишається на своєму місці і реагує на кліки миші.
+*/
+.hidden-item {
+    display: none;
+}
