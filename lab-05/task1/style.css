@@ -20,7 +20,7 @@ ul {
     padding: 0;
 }
 
-ul.level-1 {
+ul.plan-list {
     background-color: rgb(103, 158, 128);
     padding: 0 20px 0 30px;
     margin-bottom: 15px;
@@ -31,7 +31,7 @@ span {
     display: inline-block;
 }
 
-.head-title {
+.stage-title {
     font-size: 20px;
     font-weight: 700;
     background-color: rgb(199, 124, 106);
@@ -43,6 +43,7 @@ span {
 .icon-main {
     position: relative;
 }
+
 .icon-main::before {
     content: "";
     position: absolute;
@@ -56,13 +57,13 @@ span {
     background-size: contain;
 }
 
-ul.level-2 {
+ul.stage-list {
     font-size: 18px;
     font-style: italic;
     padding-left: 15px;
 }
 
-ul.level-2 li {
+ul.stage-list li {
     background-color: rgb(153, 180, 102);
     margin-bottom: 10px;
     padding-left: 50px;
@@ -71,11 +72,11 @@ ul.level-2 li {
     background-size: 32px 32px;
 }
 
-ul.level-2 li:last-child {
+ul.stage-list li:last-child {
     margin-bottom: 0;
 }
 
-ul.level-2 span {
+ul.stage-list span {
     background-color: rgb(218, 106, 32);
     padding: 10px 20px;
 }
