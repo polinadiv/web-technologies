@@ -15,6 +15,12 @@ a {
     color: white;
     display: block;
 }
+.nav-icon {
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    margin-right: 6px;
+}
 
 .navbar-horizontal {
     position: fixed;
