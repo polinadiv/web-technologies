@@ -4,98 +4,113 @@
     <meta charset="UTF-8">
     <title>Попап без JS</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
+<body class="page-body">
 
 <header class="header">
     <div class="header-right">
         <a href="#" class="header-link" tabindex="0">Mail</a>
         <a href="#" class="header-link" tabindex="0">Images</a>
 
-        <input type="checkbox" id="popup-toggle" class="popup-checkbox">
-        <input type="checkbox" id="more-toggle" class="popup-checkbox">
+        <input type="checkbox" id="popup-toggle" class="popup-checkbox popup-toggle-input">
+        <input type="checkbox" id="more-toggle" class="popup-checkbox more-toggle-input">
 
         <label for="popup-toggle" class="popup-button" tabindex="0" title="Google apps">
-            <i class="fa-solid fa-grip"></i>
+            <span class="popup-button-icon">⠿</span>
         </label>
 
+        <div class="notification-button" tabindex="0" title="Notifications">
+            <span class="notification-icon">🔔</span>
+        </div>
+
         <div class="user-profile" tabindex="0">
-            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80" alt="Avatar">
+            <span class="user-avatar-placeholder">👤</span>
         </div>
 
         <div class="popup-container" tabindex="0">
             <div class="popup-grid">
                 <a href="#" class="popup-item" tabindex="0">
-                    <i class="fa-solid fa-calendar-days" style="color: #4285f4;"></i>
-                    <span>Calendar</span>
+                    <span class="popup-item-icon icon-blue">📅</span>
+                    <span class="popup-item-text">Calendar</span>
                 </a>
                 <a href="#" class="popup-item" tabindex="0">
-                    <i class="fa-solid fa-envelope" style="color: #ea4335;"></i>
-                    <span>Mail</span>
+                    <span class="popup-item-icon icon-red">✉️</span>
+                    <span class="popup-item-text">Mail</span>
                 </a>
                 <a href="#" class="popup-item" tabindex="0">
-                    <i class="fa-solid fa-newspaper" style="color: #fbbc05;"></i>
-                    <span>News</span>
+                    <span class="popup-item-icon icon-yellow">📰</span>
+                    <span class="popup-item-text">News</span>
                 </a>
                 <a href="#" class="popup-item" tabindex="0">
-                    <i class="fa-solid fa-map-location-dot" style="color: #34a853;"></i>
-                    <span>Map</span>
+                    <span class="popup-item-icon icon-green">📍</span>
+                    <span class="popup-item-text">Map</span>
                 </a>
                 <a href="#" class="popup-item active-item" tabindex="0">
-                    <i class="fa-solid fa-folder" style="color: #fbbc05;"></i>
-                    <span>Files</span>
+                    <span class="popup-item-icon icon-yellow">📁</span>
+                    <span class="popup-item-text">Files</span>
                 </a>
                 <a href="#" class="popup-item" tabindex="0">
-                    <i class="fa-solid fa-address-book" style="color: #34a853;"></i>
-                    <span>Contacts</span>
+                    <span class="popup-item-icon icon-green">📇</span>
+                    <span class="popup-item-text">Contacts</span>
                 </a>
                 <a href="#" class="popup-item" tabindex="0">
-                    <i class="fa-solid fa-language" style="color: #4285f4;"></i>
-                    <span>Translate</span>
+                    <span class="popup-item-icon icon-blue">🌐</span>
+                    <span class="popup-item-text">Translate</span>
                 </a>
                 <a href="#" class="popup-item" tabindex="0">
-                    <i class="fa-solid fa-video" style="color: #ea4335;"></i>
-                    <span>Videos</span>
+                    <span class="popup-item-icon icon-red">▶️</span>
+                    <span class="popup-item-text">Videos</span>
                 </a>
                 <a href="#" class="popup-item" tabindex="0">
-                    <i class="fa-solid fa-magnifying-glass" style="color: #4285f4;"></i>
-                    <span>Search</span>
+                    <span class="popup-item-icon icon-blue">🔍</span>
+                    <span class="popup-item-text">Search</span>
                 </a>
             </div>
 
             <div class="popup-more-content">
                 <div class="popup-grid">
                     <a href="#" class="popup-item" tabindex="0">
-                        <i class="fa-solid fa-images" style="color: #4285f4;"></i>
-                        <span>Photos</span>
+                        <span class="popup-item-icon icon-blue">🖼️</span>
+                        <span class="popup-item-text">Photos</span>
                     </a>
                     <a href="#" class="popup-item" tabindex="0">
-                        <i class="fa-solid fa-cube" style="color: #ea4335;"></i>
-                        <span>Apps</span>
+                        <span class="popup-item-icon icon-red">🧩</span>
+                        <span class="popup-item-text">Apps</span>
                     </a>
                     <a href="#" class="popup-item" tabindex="0">
-                        <i class="fa-solid fa-file-lines" style="color: #fbbc05;"></i>
-                        <span>Documents</span>
+                        <span class="popup-item-icon icon-yellow">📄</span>
+                        <span class="popup-item-text">Documents</span>
                     </a>
                     <a href="#" class="popup-item" tabindex="0">
-                        <i class="fa-solid fa-comments" style="color: #34a853;"></i>
-                        <span>Chat</span>
+                        <span class="popup-item-icon icon-green">💬</span>
+                        <span class="popup-item-text">Chat</span>
                     </a>
                     <a href="#" class="popup-item" tabindex="0">
-                        <i class="fa-solid fa-graduation-cap" style="color: #e37400;"></i>
-                        <span>Classroom</span>
+                        <span class="popup-item-icon icon-orange">🎓</span>
+                        <span class="popup-item-text">Classroom</span>
                     </a>
                     <a href="#" class="popup-item" tabindex="0">
-                        <i class="fa-solid fa-bookmark" style="color: #4285f4;"></i>
-                        <span>Collection</span>
+                        <span class="popup-item-icon icon-blue">🔖</span>
+                        <span class="popup-item-text">Collection</span>
+                    </a>
+                    <a href="#" class="popup-item" tabindex="0">
+                        <span class="popup-item-icon icon-red">🔴</span>
+                        <span class="popup-item-text">Mars</span>
+                    </a>
+                    <a href="#" class="popup-item" tabindex="0">
+                        <span class="popup-item-icon icon-yellow">📑</span>
+                        <span class="popup-item-text">Blogs</span>
+                    </a>
+                    <a href="#" class="popup-item" tabindex="0">
+                        <span class="popup-item-icon icon-blue">📢</span>
+                        <span class="popup-item-text">Promos</span>
                     </a>
                 </div>
             </div>
 
             <label for="more-toggle" class="popup-more-btn" tabindex="0">
                 <span class="btn-text-more">More</span>
-                <span class="btn-text-less">Less</span>
+                <span class="btn-text-less">Even more from Kottans</span>
             </label>
         </div>
     </div>

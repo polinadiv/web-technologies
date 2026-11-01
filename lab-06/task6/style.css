@@ -1,4 +1,4 @@
-body {
+.page-body {
     font-family: Arial, sans-serif;
     margin: 0;
     background-color: #f8f9fa;
@@ -7,7 +7,7 @@ body {
 .header {
     background-color: #fff;
     padding: 10px 20px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -30,11 +30,56 @@ body {
     text-decoration: underline;
 }
 
-.user-profile img {
+.header-link:focus {
+    outline: 2px solid #1a73e8;
+    border-radius: 2px;
+}
+
+.notification-button {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+    color: #5f6368;
+    transition: background-color 0.2s;
+}
+
+.notification-button:hover {
+    background-color: rgba(60, 64, 67, 0.08);
+}
+
+.notification-button:focus {
+    outline: 2px solid #1a73e8;
+}
+
+.notification-icon {
+    font-size: 18px;
+}
+
+.user-profile {
     width: 32px;
     height: 32px;
     border-radius: 50%;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e0e0e0;
+}
+
+.user-profile:hover {
+    opacity: 0.85;
+}
+
+.user-profile:focus {
+    outline: 2px solid #1a73e8;
+}
+
+.user-avatar-placeholder {
+    font-size: 18px;
 }
 
 .popup-button {
@@ -46,22 +91,29 @@ body {
     border-radius: 50%;
     cursor: pointer;
     color: #5f6368;
-    font-size: 18px;
+    font-size: 20px;
     transition: background-color 0.2s;
 }
 
 .popup-button:hover {
-    background-color: rgba(60,64,67,0.08);
+    background-color: rgba(60, 64, 67, 0.08);
 }
 
-.popup-button:focus {
+.popup-button:focus,
+.popup-toggle-input:focus ~ .popup-button {
     outline: 2px solid #1a73e8;
 }
 
 .popup-checkbox {
     position: absolute;
     opacity: 0;
-    pointer-events: none;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
 }
 
 .popup-container {
@@ -72,22 +124,26 @@ body {
     max-height: 400px;
     background-color: #fff;
     border-radius: 24px;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
     padding: 24px 16px 16px 16px;
     box-sizing: border-box;
 
+    display: none;
     visibility: hidden;
     opacity: 0;
-    display: none;
     overflow-y: hidden;
     z-index: 1000;
     transition: opacity 0.2s ease;
 }
 
-#popup-toggle:checked ~ .popup-container {
+.popup-container:focus {
+    outline: 2px solid #1a73e8;
+}
+
+.popup-toggle-input:checked ~ .popup-container {
+    display: block;
     visibility: visible;
     opacity: 1;
-    display: block;
 }
 
 .popup-grid {
@@ -107,23 +163,23 @@ body {
     transition: background-color 0.2s;
 }
 
-.popup-item i {
+.popup-item-icon {
     font-size: 28px;
     margin-bottom: 8px;
 }
 
-.popup-item span {
+.popup-item-text {
     font-size: 12px;
     color: #3c4043;
 }
 
 .popup-item:hover {
-    background-color: rgba(60,64,67,0.06);
+    background-color: rgba(60, 64, 67, 0.06);
 }
 
 .popup-item:focus {
     outline: none;
-    background-color: rgba(60,64,67,0.06);
+    background-color: rgba(60, 64, 67, 0.06);
     box-shadow: inset 0 0 0 2px #1a73e8;
 }
 
@@ -150,21 +206,24 @@ body {
     background-color: #f1f3f4;
 }
 
-.popup-more-btn:focus {
+.popup-more-btn:focus,
+.more-toggle-input:focus ~ .popup-container .popup-more-btn {
     outline: 2px solid #1a73e8;
 }
 
-.popup-more-btn .btn-text-less {
+.btn-text-less {
     display: none;
 }
-.popup-more-btn .btn-text-more {
+
+.btn-text-more {
     display: inline;
 }
 
-#more-toggle:checked ~ .popup-container .popup-more-btn .btn-text-more {
+.more-toggle-input:checked ~ .popup-container .btn-text-more {
     display: none;
 }
-#more-toggle:checked ~ .popup-container .popup-more-btn .btn-text-less {
+
+.more-toggle-input:checked ~ .popup-container .btn-text-less {
     display: inline;
 }
 
@@ -175,11 +234,11 @@ body {
     padding-top: 16px;
 }
 
-#more-toggle:checked ~ .popup-container {
+.more-toggle-input:checked ~ .popup-container {
     max-height: 480px;
     overflow-y: auto;
 }
 
-#more-toggle:checked ~ .popup-container .popup-more-content {
+.more-toggle-input:checked ~ .popup-container .popup-more-content {
     display: block;
 }
