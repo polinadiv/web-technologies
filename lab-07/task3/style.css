@@ -1,0 +1,159 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    color: #333;
+}
+
+.weather-container {
+    background: #ffffff;
+    width: 100%;
+    max-width: 500px;
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.location-title {
+    font-size: 32px;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 4px;
+}
+
+.current-date {
+    font-size: 14px;
+    color: #666;
+}
+
+.current-condition {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 12px;
+}
+
+.current-main-info {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+}
+
+.temperature-block {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 200px;
+    flex-shrink: 0;
+    transform: translateY(-10px);
+}
+
+.main-icon {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.temperature {
+    font-size: 28px;
+    font-weight: 600;
+    color: #333;
+}
+
+.temperature .unit {
+    font-size: 14px;
+    font-weight: normal;
+    vertical-align: super;
+}
+
+.details-list {
+    font-size: 13px;
+    color: #555;
+    line-height: 1.5;
+    text-align: left;
+    flex-shrink: 0;
+}
+
+.details-list .detail-value {
+    color: #000;
+    font-weight: 500;
+}
+
+.divider {
+    border: none;
+    border-top: 1px solid #d0d0d0;
+    margin: 16px 0;
+}
+
+.forecast-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.forecast-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #d0d0d0;
+}
+
+.forecast-item:last-child {
+    border-bottom: none;
+}
+
+.day-name {
+    width: 110px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #333;
+    flex-shrink: 0;
+}
+
+.forecast-icon {
+    width: 60px;
+    text-align: left;
+    flex-shrink: 0;
+    margin-right: 40px;
+}
+
+.forecast-icon img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+
+.forecast-temp {
+    width: 100px;
+    text-align: left;
+    flex-shrink: 0;
+    margin-left: 0;
+}
+
+.temp-high {
+    font-size: 15px;
+    font-weight: 600;
+    color: #333;
+    display: block;
+}
+
+.temp-low {
+    font-size: 14px;
+    color: #888;
+    display: block;
+}
+
+.forecast-pollen {
+    flex-grow: 1;
+    text-align: left;
+    font-size: 14px;
+    color: #666;
+    padding-left: 20px;
+}
