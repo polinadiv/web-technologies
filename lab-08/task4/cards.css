@@ -91,20 +91,30 @@ body {
 
 @media screen and (max-width: 768px) {
     .cards-container {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-areas: none;
+        grid-template-columns: repeat(2, 1fr) !important;
+        grid-template-areas: none !important;
     }
+
     .card, .card-large {
-        min-height: auto;
-    }
-    .card-large {
-        grid-area: auto;
+        min-height: auto !important;
+        grid-area: auto !important;
     }
 }
 
 @media screen and (max-width: 576px) {
     .cards-container {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr !important;
+        grid-template-areas: none !important;
+        gap: 15px !important;
+    }
+
+    .card, .card-large {
+        min-height: auto !important;
+        grid-area: auto !important;
+    }
+
+    .card-large .card-image img {
+        height: 200px !important;
     }
 }
 
