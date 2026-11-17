@@ -87,19 +87,36 @@ body {
 .arrow-btn {
     background: transparent;
     border: none;
-    padding: 10px 14px;
+    padding: 12px 15px;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.arrow-btn img {
-    width: 14px;
-    height: 14px;
-    filter: brightness(0.2);
+.arrow-btn:hover {
+    background-color: #c4c9d0;
 }
 
 .arrow-btn:first-child {
     border-right: 1px solid #9ca3af;
+}
+
+.arrow-btn::before {
+    content: "";
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-top: 2px solid #1f2937;
+    border-left: 2px solid #1f2937;
+}
+
+.arrow-btn.prev::before {
+    transform: rotate(-45deg);
+    margin-left: 3px;
+}
+
+.arrow-btn.next::before {
+    transform: rotate(135deg);
+    margin-right: 3px;
 }
