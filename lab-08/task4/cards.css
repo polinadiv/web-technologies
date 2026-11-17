@@ -65,6 +65,10 @@ body {
     color: #333;
 }
 
+.card-subtitle {
+    margin-top: 15px;
+}
+
 .card-content p {
     font-size: 0.9rem;
     color: #666;
@@ -72,13 +76,13 @@ body {
 }
 
 .card-btn {
+    display: block;
     width: 100%;
     padding: 10px 16px;
     background-color: #777777;
     color: #ffffff;
-    border: none;
+    text-decoration: none;
     border-radius: 2px;
-    cursor: pointer;
     font-size: 0.85rem;
     margin-top: 6px;
     text-align: center;
